@@ -35,7 +35,7 @@ The application requires a running PostgreSQL database. This is managed using Do
 
 # Bird Watch Eclipse RCP Update Site Installation Guide
 This section explains how to install or update the Bird Watch Eclipse RCP application feature
-using the provided update site ZIP archive.
+using the provided update site ZIP archive. (src/main/resources/spirent-birdwatch-update-site.zip)
 
 ---
 

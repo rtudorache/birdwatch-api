@@ -15,7 +15,13 @@ The application requires a running PostgreSQL database. This is managed using Do
     ```bash
     docker ps
     ```
-4. **Start the App**
+4. **Build the App:**
+
+       ```bash
+   ./gradlew clean build
+    ```
+
+5. **Start the App:**
 
     ```bash
     ./gradlew bootRun

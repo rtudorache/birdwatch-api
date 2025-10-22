@@ -1,0 +1,180 @@
+2025-10-22 11:02:19.608 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - Starting ItestBackendApplication using Java 11.0.28 on Snow with PID 1145552 (C:\Users\rober\Learning\Projects\itest-backend\build\classes\java\main started by rober in C:\Users\rober\Learning\Projects\itest-backend)
+2025-10-22 11:02:19.608 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 11:03:32.918 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - Starting ItestBackendApplication using Java 11.0.28 on Snow with PID 1150452 (C:\Users\rober\Learning\Projects\itest-backend\build\classes\java\main started by rober in C:\Users\rober\Learning\Projects\itest-backend)
+2025-10-22 11:03:32.924 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 11:03:40.472 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - Started ItestBackendApplication in 7.993 seconds (JVM running for 10.019)
+2025-10-22 11:03:55.427 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:03:55.428 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:03:55.571 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.service.BirdService - Found 3 birds out of 3 total
+2025-10-22 11:05:07.551 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:05:07.551 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:05:07.566 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.service.BirdService - Found 3 birds out of 3 total
+2025-10-22 11:05:39.408 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:05:39.408 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:05:39.420 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.service.BirdService - Found 3 birds out of 3 total
+2025-10-22 11:06:17.899 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:06:17.899 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:06:17.909 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.service.BirdService - Found 3 birds out of 3 total
+2025-10-22 11:06:51.282 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.api.SightingsController - Creating new sighting for bird ID: 1 at location: qwe
+2025-10-22 11:06:51.282 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.service.SightingService - Creating sighting for bird ID: 1 at location: qwe
+2025-10-22 11:06:51.323 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.service.SightingService - Successfully created sighting with ID: 6
+2025-10-22 11:06:51.323 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.api.SightingsController - Successfully created sighting with ID: 6
+2025-10-22 11:06:56.672 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 1, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:06:56.672 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 1, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:06:56.716 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:06:56.717 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:07:10.197 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: qwe, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:07:10.198 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: qwe, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:07:10.225 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:07:10.225 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:08:07.890 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:08:07.890 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:08:07.898 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.service.BirdService - Found 3 birds out of 3 total
+2025-10-22 11:08:56.786 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.api.BirdsController - Creating new bird with name: Vultur
+2025-10-22 11:08:56.786 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.service.BirdService - Creating bird with name: Vultur
+2025-10-22 11:08:56.797 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.service.BirdService - Successfully created bird with ID: 4
+2025-10-22 11:08:56.797 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.api.BirdsController - Successfully created bird with ID: 4
+2025-10-22 11:08:59.341 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:08:59.341 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:08:59.537 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.service.BirdService - Found 4 birds out of 4 total
+2025-10-22 11:10:31.773 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:10:31.773 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:10:31.782 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.service.BirdService - Found 4 birds out of 4 total
+2025-10-22 11:11:09.827 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: Robin, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:09.828 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: Robin, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:09.838 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.service.SightingService - Found 2 sightings out of 2 total
+2025-10-22 11:11:09.838 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.api.SightingsController - Found 2 sightings
+2025-10-22 11:11:16.656 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: Vultur, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:16.656 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: Vultur, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:16.660 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:11:16.660 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:11:30.901 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.api.SightingsController - Creating new sighting for bird ID: 4 at location: Pucioasa
+2025-10-22 11:11:30.901 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.service.SightingService - Creating sighting for bird ID: 4 at location: Pucioasa
+2025-10-22 11:11:30.909 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.service.SightingService - Successfully created sighting with ID: 7
+2025-10-22 11:11:30.909 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.api.SightingsController - Successfully created sighting with ID: 7
+2025-10-22 11:11:31.605 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:31.605 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:31.608 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:11:31.608 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:11:33.208 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:33.208 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:33.211 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:11:33.211 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:11:34.940 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:34.940 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:34.984 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:11:34.984 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:11:38.344 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:38.344 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:38.347 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:11:38.347 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:11:38.716 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:38.716 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:38.718 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:11:38.718 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:11:38.906 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:38.906 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:38.908 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:11:38.908 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:11:39.085 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:39.085 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:39.087 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:11:39.087 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:11:43.658 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: Vultur, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:43.658 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: Vultur, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:43.662 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.service.SightingService - Found 1 sightings out of 1 total
+2025-10-22 11:11:43.663 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.api.SightingsController - Found 1 sightings
+2025-10-22 11:11:47.150 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: Vultur, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:47.151 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: Vultur, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:47.192 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.service.SightingService - Found 1 sightings out of 1 total
+2025-10-22 11:11:47.192 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.api.SightingsController - Found 1 sightings
+2025-10-22 11:11:47.746 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: Vultur, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:47.746 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: Vultur, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:11:47.804 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.service.SightingService - Found 1 sightings out of 1 total
+2025-10-22 11:11:47.804 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.api.SightingsController - Found 1 sightings
+2025-10-22 11:11:50.821 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:11:50.821 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:11:50.829 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.service.BirdService - Found 4 birds out of 4 total
+2025-10-22 11:11:51.380 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:11:51.380 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:11:51.387 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.service.BirdService - Found 4 birds out of 4 total
+2025-10-22 11:11:51.531 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:11:51.531 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:11:51.538 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.service.BirdService - Found 4 birds out of 4 total
+2025-10-22 11:11:51.676 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:11:51.676 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:11:51.683 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.service.BirdService - Found 4 birds out of 4 total
+2025-10-22 11:14:31.440 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:14:31.440 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:14:31.452 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.service.BirdService - Found 4 birds out of 4 total
+2025-10-22 11:15:33.633 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - Starting ItestBackendApplication using Java 11.0.28 on Snow with PID 1159432 (C:\Users\rober\Learning\Projects\itest-backend\build\classes\java\main started by rober in C:\Users\rober\Learning\Projects\itest-backend)
+2025-10-22 11:15:33.633 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 11:15:37.889 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - Started ItestBackendApplication in 4.465 seconds (JVM running for 5.277)
+2025-10-22 11:15:46.248 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:15:46.248 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:15:46.362 [http-nio-8080-exec-2] INFO  com.spirent.itest_backend.service.BirdService - Found 3 birds out of 3 total
+2025-10-22 11:16:20.286 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.api.BirdsController - Creating new bird with name: American Eagle
+2025-10-22 11:16:20.286 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.service.BirdService - Creating bird with name: American Eagle
+2025-10-22 11:16:20.318 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.service.BirdService - Successfully created bird with ID: 4
+2025-10-22 11:16:20.318 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.api.BirdsController - Successfully created bird with ID: 4
+2025-10-22 11:16:25.671 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:16:25.671 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:16:25.739 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.service.BirdService - Found 4 birds out of 4 total
+2025-10-22 11:18:38.996 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:18:38.996 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:18:39.012 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.service.BirdService - Found 4 birds out of 4 total
+2025-10-22 11:18:57.707 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: Jay, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:18:57.708 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: Jay, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:18:57.745 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.service.SightingService - Found 1 sightings out of 1 total
+2025-10-22 11:18:57.745 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.api.SightingsController - Found 1 sightings
+2025-10-22 11:19:15.159 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.api.SightingsController - Creating new sighting for bird ID: 4 at location: Washington
+2025-10-22 11:19:15.159 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.service.SightingService - Creating sighting for bird ID: 4 at location: Washington
+2025-10-22 11:19:15.172 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.service.SightingService - Successfully created sighting with ID: 6
+2025-10-22 11:19:15.172 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.api.SightingsController - Successfully created sighting with ID: 6
+2025-10-22 11:19:16.267 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:19:16.268 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 4, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:19:16.272 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:19:16.272 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:19:26.421 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: Jay, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:19:26.422 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: Jay, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:19:26.425 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.service.SightingService - Found 1 sightings out of 1 total
+2025-10-22 11:19:26.425 [http-nio-8080-exec-6] INFO  com.spirent.itest_backend.api.SightingsController - Found 1 sightings
+2025-10-22 11:19:32.741 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: Eagle, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:19:32.742 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: Eagle, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:19:32.745 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.service.SightingService - Found 1 sightings out of 1 total
+2025-10-22 11:19:32.745 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.api.SightingsController - Found 1 sightings
+2025-10-22 11:32:39.978 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:32:39.980 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:32:40.097 [http-nio-8080-exec-3] INFO  com.spirent.itest_backend.service.BirdService - Found 4 birds out of 4 total
+2025-10-22 11:32:53.123 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.api.BirdsController - Creating new bird with name: dasd
+2025-10-22 11:32:53.123 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.service.BirdService - Creating bird with name: dasd
+2025-10-22 11:32:53.229 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.service.BirdService - Successfully created bird with ID: 5
+2025-10-22 11:32:53.229 [http-nio-8080-exec-10] INFO  com.spirent.itest_backend.api.BirdsController - Successfully created bird with ID: 5
+2025-10-22 11:32:54.203 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:32:54.203 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:32:54.213 [http-nio-8080-exec-4] INFO  com.spirent.itest_backend.service.BirdService - Found 5 birds out of 5 total
+2025-10-22 11:33:00.891 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.api.SightingsController - Creating new sighting for bird ID: 5 at location: dsadas
+2025-10-22 11:33:00.891 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.service.SightingService - Creating sighting for bird ID: 5 at location: dsadas
+2025-10-22 11:33:00.915 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.service.SightingService - Successfully created sighting with ID: 7
+2025-10-22 11:33:00.916 [http-nio-8080-exec-5] INFO  com.spirent.itest_backend.api.SightingsController - Successfully created sighting with ID: 7
+2025-10-22 11:33:02.240 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 5, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:33:02.241 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 5, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:33:02.377 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:33:02.377 [http-nio-8080-exec-1] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:33:04.491 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: 5, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:33:04.500 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: 5, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:33:04.517 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.service.SightingService - Found 0 sightings out of 0 total
+2025-10-22 11:33:04.517 [http-nio-8080-exec-8] INFO  com.spirent.itest_backend.api.SightingsController - Found 0 sightings
+2025-10-22 11:33:09.917 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.api.SightingsController - Searching for sightings with birdName: da, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:33:09.917 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.service.SightingService - Finding sightings with filters - birdName: da, location: null, startDateTime: null, endDateTime: null, page: 0, size: 20, sort: dateTime, direction: desc
+2025-10-22 11:33:09.921 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.service.SightingService - Found 1 sightings out of 1 total
+2025-10-22 11:33:09.921 [http-nio-8080-exec-9] INFO  com.spirent.itest_backend.api.SightingsController - Found 1 sightings
+2025-10-22 11:34:58.885 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.api.BirdsController - Searching for birds with name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:34:58.885 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.service.BirdService - Finding birds with filters - name: null, color: null, weightMin: null, weightMax: null, heightMin: null, heightMax: null, page: 0, size: 20, sort: name, direction: asc
+2025-10-22 11:34:58.898 [http-nio-8080-exec-7] INFO  com.spirent.itest_backend.service.BirdService - Found 5 birds out of 5 total
+2025-10-22 11:54:15.714 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - Starting ItestBackendApplication using Java 17.0.10 on Snow with PID 1201144 (C:\Users\rober\Learning\Projects\itest-backend\build\classes\java\main started by rober in C:\Users\rober\Learning\Projects\itest-backend)
+2025-10-22 11:54:15.717 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 11:54:18.984 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - Started ItestBackendApplication in 3.532 seconds (JVM running for 4.139)
+2025-10-22 11:55:56.284 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - Starting ItestBackendApplication using Java 11.0.28 on Snow with PID 1199308 (C:\Users\rober\Learning\Projects\itest-backend\build\classes\java\main started by rober in C:\Users\rober\Learning\Projects\itest-backend)
+2025-10-22 11:55:56.286 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 11:55:58.107 [main] INFO  com.spirent.itest_backend.ItestBackendApplication - Started ItestBackendApplication in 2.004 seconds (JVM running for 3.24)

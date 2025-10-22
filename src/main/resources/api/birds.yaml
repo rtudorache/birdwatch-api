@@ -1,0 +1,655 @@
+openapi: 3.0.3
+info:
+  title: Birdwatch API
+  description: API service for tracking birds and sightings.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/api/v1
+    description: Development server
+
+paths:
+  # --- Birds ---
+  /birds:
+    post:
+      summary: Add a new bird
+      operationId: addBird
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BirdRequest'
+      responses:
+        '201':
+          description: Bird created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bird'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    get:
+      summary: List all birds with optional filters and pagination
+      operationId: findBirds
+      parameters:
+        - name: name
+          in: query
+          description: Filter by bird name (partial match)
+          required: false
+          schema:
+            type: string
+            minLength: 1
+            maxLength: 100
+        - name: color
+          in: query
+          description: Filter by bird color
+          required: false
+          schema:
+            type: string
+            minLength: 1
+            maxLength: 50
+        - name: weightMin
+          in: query
+          description: Minimum weight in grams
+          required: false
+          schema:
+            type: number
+            format: double
+            minimum: 0.1
+        - name: weightMax
+          in: query
+          description: Maximum weight in grams
+          required: false
+          schema:
+            type: number
+            format: double
+            maximum: 10000.0
+        - name: heightMin
+          in: query
+          description: Minimum height in cm
+          required: false
+          schema:
+            type: number
+            format: double
+            minimum: 0.1
+        - name: heightMax
+          in: query
+          description: Maximum height in cm
+          required: false
+          schema:
+            type: number
+            format: double
+            maximum: 200.0
+        - name: page
+          in: query
+          description: Page number (0-based)
+          required: false
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+        - name: size
+          in: query
+          description: Number of items per page
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+        - name: sort
+          in: query
+          description: Sort field
+          required: false
+          schema:
+            type: string
+            enum: [name, color, weight, height, createdAt]
+            default: name
+        - name: direction
+          in: query
+          description: Sort direction
+          required: false
+          schema:
+            type: string
+            enum: [asc, desc]
+            default: asc
+      responses:
+        '200':
+          description: A paginated list of birds
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedBirds'
+        '400':
+          description: Invalid query parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /birds/{birdId}:
+    parameters:
+      - name: birdId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+    get:
+      summary: Get a bird by ID
+      operationId: getBirdById
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bird'
+        '404':
+          description: Bird not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update an existing bird
+      operationId: updateBird
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateBirdRequest'
+      responses:
+        '200':
+          description: Bird updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bird'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Bird not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a bird
+      operationId: deleteBird
+      responses:
+        '204':
+          description: Bird deleted successfully
+        '404':
+          description: Bird not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  # --- Sightings ---
+  /sightings:
+    post:
+      summary: Add a new bird sighting
+      operationId: addSighting
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SightingRequest'
+      responses:
+        '201':
+          description: Sighting created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sighting'
+        '400':
+          description: Invalid input (e.g., birdId not found)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    get:
+      summary: List all sightings with optional filters and pagination
+      operationId: findSightings
+      parameters:
+        - name: birdName
+          in: query
+          description: Filter by bird name (partial match)
+          required: false
+          schema:
+            type: string
+            minLength: 1
+            maxLength: 100
+        - name: location
+          in: query
+          description: Filter by location (partial match)
+          required: false
+          schema:
+            type: string
+            minLength: 1
+            maxLength: 200
+        - name: startDateTime
+          in: query
+          description: Start of the time interval
+          required: false
+          schema:
+            type: string
+            format: date-time
+        - name: endDateTime
+          in: query
+          description: End of the time interval
+          required: false
+          schema:
+            type: string
+            format: date-time
+        - name: page
+          in: query
+          description: Page number (0-based)
+          required: false
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+        - name: size
+          in: query
+          description: Number of items per page
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+        - name: sort
+          in: query
+          description: Sort field
+          required: false
+          schema:
+            type: string
+            enum: [dateTime, location, birdName, createdAt]
+            default: dateTime
+        - name: direction
+          in: query
+          description: Sort direction
+          required: false
+          schema:
+            type: string
+            enum: [asc, desc]
+            default: desc
+      responses:
+        '200':
+          description: A paginated list of sightings
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSightings'
+        '400':
+          description: Invalid query parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /sightings/{sightingId}:
+    parameters:
+      - name: sightingId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+    get:
+      summary: Get a sighting by ID
+      operationId: getSightingById
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sighting'
+        '404':
+          description: Sighting not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update an existing sighting
+      operationId: updateSighting
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateSightingRequest'
+      responses:
+        '200':
+          description: Sighting updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sighting'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Sighting not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a sighting
+      operationId: deleteSighting
+      responses:
+        '204':
+          description: Sighting deleted successfully
+        '404':
+          description: Sighting not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+# --- Component Schemas (Data Models) ---
+components:
+  schemas:
+    BirdRequest:
+      type: object
+      required: [name, color, weight, height]
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 100
+          pattern: '^[a-zA-Z\s\-]+$'
+          description: The bird's name (letters, spaces, hyphens only)
+          example: "American Robin"
+        color:
+          type: string
+          minLength: 1
+          maxLength: 50
+          pattern: '^[a-zA-Z\s]+$'
+          description: The bird's primary color
+          example: "Red"
+        weight:
+          type: number
+          format: double
+          minimum: 0.1
+          maximum: 10000.0
+          description: The bird's weight in grams
+          example: 77.5
+        height:
+          type: number
+          format: double
+          minimum: 0.1
+          maximum: 200.0
+          description: The bird's height in cm
+          example: 20.0
+    
+    UpdateBirdRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 100
+          pattern: '^[a-zA-Z\s\-]+$'
+          description: The bird's name (letters, spaces, hyphens only)
+          example: "American Robin"
+        color:
+          type: string
+          minLength: 1
+          maxLength: 50
+          pattern: '^[a-zA-Z\s]+$'
+          description: The bird's primary color
+          example: "Red"
+        weight:
+          type: number
+          format: double
+          minimum: 0.1
+          maximum: 10000.0
+          description: The bird's weight in grams
+          example: 77.5
+        height:
+          type: number
+          format: double
+          minimum: 0.1
+          maximum: 200.0
+          description: The bird's height in cm
+          example: 20.0
+    
+    Bird:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          readOnly: true
+          description: Auto-generated numeric identifier for the bird
+        name:
+          type: string
+          example: "American Robin"
+          description: The bird's name
+        color:
+          type: string
+          example: "Red"
+          description: The bird's primary color
+        weight:
+          type: number
+          format: double
+          example: 77.5
+          description: The bird's weight in grams
+        height:
+          type: number
+          format: double
+          example: 20.0
+          description: The bird's height in cm
+        sightings:
+          type: array
+          items:
+            $ref: "#/components/schemas/Sighting"
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: When the bird was first recorded
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: When the bird was last updated
+
+    SightingRequest:
+      type: object
+      required:
+        - birdId
+        - location
+        - dateTime
+      properties:
+        birdId:
+          type: integer
+          format: int64
+          description: The ID of the bird that was sighted
+        location:
+          type: string
+          minLength: 1
+          maxLength: 200
+          description: Where the bird was seen
+          example: "Central Park, New York"
+        dateTime:
+          type: string
+          format: date-time
+          description: Date and time of the sighting
+          example: "2024-01-15T10:30:00Z"
+    
+    UpdateSightingRequest:
+      type: object
+      properties:
+        birdId:
+          type: integer
+          format: int64
+          description: The ID of the bird that was sighted
+        location:
+          type: string
+          minLength: 1
+          maxLength: 200
+          description: Where the bird was seen
+          example: "Central Park, New York"
+        dateTime:
+          type: string
+          format: date-time
+          description: Date and time of the sighting
+          example: "2024-01-15T10:30:00Z"
+
+    Sighting:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          readOnly: true
+          description: Auto-generated numeric identifier for the bird
+        location:
+          type: string
+          example: "Central Park, New York"
+          description: Where the bird was seen
+        dateTime:
+          type: string
+          format: date-time
+          description: Date and time of the sighting
+          example: "2024-01-15T10:30:00Z"
+        birdId:
+          type: integer
+          format: int64
+          description: The bird id
+          example: 100
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: When the sighting was first recorded
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: When the sighting was last updated
+
+    Error:
+      type: object
+      required:
+        - status
+        - message
+        - timestamp
+      properties:
+        status:
+          type: integer
+          format: int32
+          description: HTTP status code
+          example: 400
+        message:
+          type: string
+          description: Error message
+          example: "Validation failed"
+        timestamp:
+          type: string
+          format: date-time
+          description: When the error occurred
+          example: "2024-01-15T10:30:00Z"
+        field:
+          type: string
+          description: Field that caused the error (for validation errors)
+          example: "name"
+        details:
+          type: array
+          items:
+            type: string
+          description: Additional error details
+          example: ["Name must contain only letters, spaces, and hyphens"]
+    
+    PaginatedBirds:
+      type: object
+      properties:
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bird'
+        page:
+          type: integer
+          description: Current page number (0-based)
+          example: 0
+        size:
+          type: integer
+          description: Number of items per page
+          example: 20
+        totalElements:
+          type: integer
+          description: Total number of elements
+          example: 150
+        totalPages:
+          type: integer
+          description: Total number of pages
+          example: 8
+        first:
+          type: boolean
+          description: Whether this is the first page
+          example: true
+        last:
+          type: boolean
+          description: Whether this is the last page
+          example: false
+        numberOfElements:
+          type: integer
+          description: Number of elements in current page
+          example: 20
+    
+    PaginatedSightings:
+      type: object
+      properties:
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sighting'
+        page:
+          type: integer
+          description: Current page number (0-based)
+          example: 0
+        size:
+          type: integer
+          description: Number of items per page
+          example: 20
+        totalElements:
+          type: integer
+          description: Total number of elements
+          example: 150
+        totalPages:
+          type: integer
+          description: Total number of pages
+          example: 8
+        first:
+          type: boolean
+          description: Whether this is the first page
+          example: true
+        last:
+          type: boolean
+          description: Whether this is the last page
+          example: false
+        numberOfElements:
+          type: integer
+          description: Number of elements in current page
+          example: 20

@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  postgres-db:
+    image: postgres:13
+    container_name: birdwatch-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=birdwatch
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
